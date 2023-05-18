@@ -7,7 +7,6 @@ const port = process.env.PORT || 5000;
 // middleware
 app.use(cors());
 app.use(express.json());
-console.log(process.env.DB_USER);
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.bs8dc9c.mongodb.net/?retryWrites=true&w=majority`;
 
@@ -29,7 +28,13 @@ async function run() {
       .collection("catagoryrobo");
 
     app.get("/catagoryrobo", async (req, res) => {
-      const result = await catagoryRoboCollection.find().toArray();
+      console.log(req.query.category);
+      let query = {};
+      if (req.query?.category) {
+          query = { category : req.query?.category };
+      }
+      console.log(query);
+      const result = await catagoryRoboCollection.find(query).toArray();
       res.send(result);
     });
 
