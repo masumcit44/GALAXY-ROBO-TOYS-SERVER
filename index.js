@@ -34,6 +34,23 @@ async function run() {
 
     //all toys
 
+    app.post("/alltoys",async(req,res)=>{
+      const doc = {
+        category: req.body.category,
+        name: req.body.name,
+        price: req.body.price,
+        rating: req.body.Rating,
+        image: req.body.url,
+        quantity: req.body.category,
+        sellerName: req.body.seller,
+        sellerEmail: req.body.email,
+        details: req.body.detail,
+      }
+      // console.log(doc);
+      const result = await allToysCollection.insertOne(doc)
+      res.send(result);
+    })
+
     app.get("/alltoys", async (req, res) => {
       const limit = parseInt(req.query.limit) || 20;
       let query = {};
@@ -45,7 +62,6 @@ async function run() {
     });
     app.get("/alltoys/:id", async (req, res) => {
       const id = req.params.id;
-      console.log(id);
       const filter = { _id: new ObjectId(id) };
       const result = await allToysCollection.findOne(filter);
       res.send(result);
