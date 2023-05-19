@@ -34,7 +34,7 @@ async function run() {
 
     //all toys
 
-    app.post("/alltoys",async(req,res)=>{
+    app.post("/alltoys", async (req, res) => {
       const doc = {
         category: req.body.category,
         name: req.body.name,
@@ -45,24 +45,39 @@ async function run() {
         sellerName: req.body.seller,
         sellerEmail: req.body.email,
         details: req.body.detail,
-      }
+      };
       // console.log(doc);
-      const result = await allToysCollection.insertOne(doc)
+      const result = await allToysCollection.insertOne(doc);
       res.send(result);
-    })
+    });
 
     app.get("/alltoys", async (req, res) => {
       const limit = parseInt(req.query.limit) || 20;
       let query = {};
       if (req.query?.category) {
         query = { category: req.query?.category };
+      } else if (req.query?.email) {
+        query = { sellerEmail: req.query?.email };
       }
-      else if(req.query?.email){
-        query =  { sellerEmail : req.query?.email }
-      }
-      const result = await allToysCollection.find(query).limit(limit).toArray();
+      const result = await allToysCollection
+        .find(query)
+        .sort({ price: 1 })
+        .limit(limit)
+        .toArray();
       res.send(result);
     });
+
+    app.get("/mytoys", async (req, res) => {
+      let query = {};
+      let sort = {};
+      if (req.query?.sort && req.query?.email) {
+        sort = { price: parseInt(req.query.sort) };
+        query = { sellerEmail: req.query?.email };
+      }
+      const result = await allToysCollection.find(query).sort(sort).toArray();
+      res.send(result);
+    });
+
     app.get("/alltoys/:id", async (req, res) => {
       const id = req.params.id;
       const filter = { _id: new ObjectId(id) };
@@ -70,28 +85,32 @@ async function run() {
       res.send(result);
     });
 
-    app.put("/alltoys/:id",async(req,res)=>{
+    app.put("/alltoys/:id", async (req, res) => {
       const id = req.params.id;
       const toy = req.body;
-      const filter = {_id: new ObjectId(id)}
+      const filter = { _id: new ObjectId(id) };
       const updateToy = {
         $set: {
           price: toy.price,
           details: toy.detail,
-          quantity: toy.quantity
+          quantity: toy.quantity,
         },
       };
-     const options = { upsert: true };
-     const result = await allToysCollection.updateOne(filter,updateToy,options)
-     res.send(result)
-    })
+      const options = { upsert: true };
+      const result = await allToysCollection.updateOne(
+        filter,
+        updateToy,
+        options
+      );
+      res.send(result);
+    });
 
-    app.delete("/alltoys/:id",async(req,res)=>{
-      const id = req.params.id
-      const filter = {_id: new ObjectId(id)}
-      const result = await allToysCollection.deleteOne(filter)
-      res.send(result)
-    })
+    app.delete("/alltoys/:id", async (req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id) };
+      const result = await allToysCollection.deleteOne(filter);
+      res.send(result);
+    });
 
     // catagory robo
 
