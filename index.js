@@ -57,6 +57,9 @@ async function run() {
       if (req.query?.category) {
         query = { category: req.query?.category };
       }
+      else if(req.query?.email){
+        query =  { sellerEmail : req.query?.email }
+      }
       const result = await allToysCollection.find(query).limit(limit).toArray();
       res.send(result);
     });
@@ -66,6 +69,13 @@ async function run() {
       const result = await allToysCollection.findOne(filter);
       res.send(result);
     });
+
+    app.delete("/alltoys/:id",async(req,res)=>{
+      const id = req.params.id
+      const filter = {_id: new ObjectId(id)}
+      const result = await allToysCollection.deleteOne(filter)
+      res.send(result)
+    })
 
     // catagory robo
 
