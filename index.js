@@ -28,6 +28,18 @@ async function run() {
       .collection("catagoryrobo");
     const brandsCollection = client.db('robogalaxy').collection('brands')
 
+    const discountCollection = client.db('robogalaxy').collection('discount')
+
+    const allToysCollection = client.db('robogalaxy').collection('allToys')
+
+    //all toys
+
+    app.get('/alltoys',async(req,res)=>{
+      const limit = parseInt(req.query.limit) || 20;
+      const result = await allToysCollection.find().limit(limit).toArray()
+      res.send(result)
+    })
+    
     // catagory robo
     
     app.get("/catagoryrobo", async (req, res) => {
@@ -45,6 +57,14 @@ async function run() {
       const result = await brandsCollection.find().toArray()
       res.send(result)
     })
+
+    // discount
+    
+    app.get('/discount',async(req,res)=>{
+      const result = await discountCollection.find().toArray()
+      res.send(result)
+    })
+
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

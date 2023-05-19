@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Action Figures",
+    "name": "RoboBot 2000",
+    "price": 29.99,
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1546776230-bb86256870ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=510&q=80",
+    "discount": "30%",
+    "discountedPrice": 20.99
+  },
+  {
+    "category": "Action Figures",
+    "name": "Mega Mech",
+    "price": 39.99,
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1671490290865-64f3fd1e6aab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHRveXMlMjByb2JvdHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60",
+    "discount": "40%",
+    "discountedPrice": 23.99
+  },
+  {
+    "category": "Remote Control",
+    "name": "SpeedyBot",
+    "price": 49.99,
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1608889335941-32ac5f2041b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWN0aW9uJTIwcm9ib3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60",
+    "discount": "35%",
+    "discountedPrice": 32.49
+  },
+  {
+    "category": "drone commando Sets",
+    "name": "Robo Creator",
+    "price": 29.99,
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1650132145208-9c8337e804fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1331&q=80",
+    "discount": "30%",
+    "discountedPrice": 20.99
+  }
+]
