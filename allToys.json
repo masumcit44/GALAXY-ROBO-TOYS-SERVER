@@ -1,0 +1,153 @@
+[
+  {
+    "category": "ActionFigures",
+    "name": "RoboBot 2000",
+    "price": 29.99,
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1546776230-bb86256870ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=510&q=80",
+    "discount": "30%",
+    "discountedPrice": 20.99,
+    "quantity": 3,
+    "details": "The RoboBot 2000 action figure is a powerful robotic companion. With its advanced features and interactive capabilities, it provides hours of entertainment and imaginative play.",
+    "sellerName": "ToysRUs",
+    "sellerEmail": "toysrus@example.com"
+  },
+  {
+    "category": "ActionFigures",
+    "name": "Mega Mech",
+    "price": 39.99,
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1671490290865-64f3fd1e6aab",
+    "discount": "40%",
+    "discountedPrice": 23.99,
+    "quantity": 5,
+    "details": "Unleash the power of the Mega Mech action figure! With its towering height and incredible strength, it's ready to take on any battle.",
+    "sellerName": "Toy Universe",
+    "sellerEmail": "toyuniverse@example.com"
+  },
+  {
+    "category": "RemoteControl",
+    "name": "SpeedyBot",
+    "price": 49.99,
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1608889335941-32ac5f2041b9",
+    "discount": "35%",
+    "discountedPrice": 32.49,
+    "quantity": 2,
+    "details": "Get ready for high-speed racing with the SpeedyBot remote control car. It's designed for maximum speed and maneuverability on any terrain.",
+    "sellerName": "Fun Toys",
+    "sellerEmail": "funtoys@example.com"
+  },
+  {
+    "category": "dronecommandoSets",
+    "name": "Robo Creator",
+    "price": 29.99,
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1650132145208-9c8337e804fd",
+    "discount": "30%",
+    "discountedPrice": 20.99,
+    "quantity": 4,
+    "details": "Create your own army of drones with the Robo Creator set. Build, customize, and command your drones to complete exciting missions.",
+    "sellerName": "Adventure Toys",
+    "sellerEmail": "adventuretoys@example.com"
+  },
+  {
+    "category": "ActionFigures",
+    "name": "RoboBot",
+    "price": 19.99,
+    "rating": 4.1,
+    "image": "https://m.media-amazon.com/images/I/71-kD7b7mEL._AC_SL1200_.jpg",
+    "quantity": 1,
+    "details": "The RoboBot action figure is a versatile companion for all your adventures. It can transform into different modes and has incredible flexibility.",
+    "sellerName": "Toy Galaxy",
+    "sellerEmail": "toygala@example.com"
+  },
+  {
+    "category": "ActionFigures",
+    "name": "Ninja Bot",
+    "price": 24.99,
+    "rating": 4.7,
+    "image": "https://w0.peakpx.com/wallpaper/214/114/HD-wallpaper-cyber-ninja-steel-warrior-robot-ninja.jpg",
+    "quantity": 6,
+    "details": "Become a ninja master with the Ninja Bot action figure. It has lightning-fast reflexes and deadly martial arts skills to take down any enemy.",
+    "sellerName": "Super Toys",
+    "sellerEmail": "supertoys@example.com"
+  },
+  {
+    "category": "RemoteControl",
+    "name": "Power Racer",
+    "price": 59.99,
+    "rating": 4.6,
+    "image": "https://e1.pxfuel.com/desktop-wallpaper/621/503/desktop-wallpaper-transformers-rescue-bots-academy-mini-bot-racers-stock.jpg",
+    "quantity": 2,
+    "details": "Experience the thrill of racing with the Power Racer remote control car. Its powerful motor and sleek design make it a winner on the tracks.",
+    "sellerName": "Speedy Toys",
+    "sellerEmail": "speedytoys@example.com"
+  },
+  {
+    "category": "RemoteControl",
+    "name": "AquaBot",
+    "price": 39.99,
+    "rating": 4.3,
+    "image": "https://media.wired.com/photos/594d7b04a2cd5e3aa004873c/master/w_2560%2Cc_limit/Cozmo_TopArt.jpg",
+    "quantity": 3,
+    "details": "Dive into underwater adventures with the AquaBot remote control submarine. Its waterproof design and maneuverability make it perfect for exploration.",
+    "sellerName": "Oceanic Toys",
+    "sellerEmail": "oceanictoys@example.com"
+  },
+  {
+    "category": "RemoteControl",
+    "name": "Stunt Master",
+    "price": 34.99,
+    "rating": 4.4,
+    "image": "https://m.media-amazon.com/images/I/51gSmSJOaJL._AC_UF894,1000_QL80_.jpg",
+    "quantity": 2,
+    "details": "Prepare for jaw-dropping stunts with the Stunt Master remote control car. It can perform flips, spins, and other amazing tricks.",
+    "sellerName": "Adrenaline Toys",
+    "sellerEmail": "adrenaline@example.com"
+  },
+  {
+    "category": "BuildingSets",
+    "name": "ConstructoBot",
+    "price": 39.99,
+    "rating": 4.7,
+    "image": "https://m.media-amazon.com/images/I/61fKv9xwfKL._SL1000_.jpg",
+    "quantity": 4,
+    "details": "Unleash your creativity with the ConstructoBot building set. It comes with various pieces to build unique structures and robots.",
+    "sellerName": "BuildIt Toys",
+    "sellerEmail": "buildit@example.com"
+  },
+  {
+    "category": "BuildingSets",
+    "name": "Builder's Delight",
+    "price": 49.99,
+    "rating": 4.6,
+    "image": "https://images.pexels.com/photos/9367709/pexels-photo-9367709.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "quantity": 3,
+    "details": "Let your imagination run wild with the Builder's Delight building set. It contains a wide range of bricks and components for endless construction possibilities.",
+    "sellerName": "Creative Toys",
+    "sellerEmail": "creativetoys@example.com"
+  },
+  {
+    "category": "BuildingSets",
+    "name": "Builder's Delight",
+    "price": 49.99,
+    "rating": 4.6,
+    "image": "https://images.pexels.com/photos/12748979/pexels-photo-12748979.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "quantity": 3,
+    "details": "Let your imagination run wild with the Builder's Delight building set. It contains a wide range of bricks and components for endless construction possibilities.",
+    "sellerName": "Creative Toys",
+    "sellerEmail": "creativetoys@example.com"
+  },
+  {
+    "category": "BuildingSets",
+    "name": "Builder's Delight",
+    "price": 49.99,
+    "rating": 4.6,
+    "image": "https://images.pexels.com/photos/6249454/pexels-photo-6249454.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "quantity": 3,
+    "details": "Let your imagination run wild with the Builder's Delight building set. It contains a wide range of bricks and components for endless construction possibilities.",
+    "sellerName": "Creative Toys",
+    "sellerEmail": "creativetoys@example.com"
+  }
+]

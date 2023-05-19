@@ -26,51 +26,51 @@ async function run() {
     const catagoryRoboCollection = client
       .db("robogalaxy")
       .collection("catagoryrobo");
-    const brandsCollection = client.db('robogalaxy').collection('brands')
+    const brandsCollection = client.db("robogalaxy").collection("brands");
 
-    const discountCollection = client.db('robogalaxy').collection('discount')
+    const discountCollection = client.db("robogalaxy").collection("discount");
 
-    const allToysCollection = client.db('robogalaxy').collection('allToys')
+    const allToysCollection = client.db("robogalaxy").collection("allToys");
 
     //all toys
 
-    app.get('/alltoys',async(req,res)=>{
+    app.get("/alltoys", async (req, res) => {
       const limit = parseInt(req.query.limit) || 20;
-      const result = await allToysCollection.find().limit(limit).toArray()
-      res.send(result)
-    })
-    app.get('/alltoys/:id',async(req,res)=>{
-      const id = req.params.id;
-      const query = {_id:new ObjectId(id)}
-      const result = await allToysCollection.findOne(query);
-      res.send(result)
-    })
-    
-    // catagory robo
-    
-    app.get("/catagoryrobo", async (req, res) => {
       let query = {};
       if (req.query?.category) {
-          query = { category : req.query?.category };
+        query = { category: req.query?.category };
       }
-      const result = await catagoryRoboCollection.find(query).toArray();
+      const result = await allToysCollection.find(query).limit(limit).toArray();
+      res.send(result);
+    });
+    app.get("/alltoys/:id", async (req, res) => {
+      const id = req.params.id;
+      console.log(id);
+      const filter = { _id: new ObjectId(id) };
+      const result = await allToysCollection.findOne(filter);
       res.send(result);
     });
 
-    // brand 
+    // catagory robo
 
-    app.get('/brands',async(req,res)=>{
-      const result = await brandsCollection.find().toArray()
-      res.send(result)
-    })
+    app.get("/catagoryrobo", async (req, res) => {
+      const result = await catagoryRoboCollection.find().toArray();
+      res.send(result);
+    });
+
+    // brand
+
+    app.get("/brands", async (req, res) => {
+      const result = await brandsCollection.find().toArray();
+      res.send(result);
+    });
 
     // discount
-    
-    app.get('/discount',async(req,res)=>{
-      const result = await discountCollection.find().toArray()
-      res.send(result)
-    })
 
+    app.get("/discount", async (req, res) => {
+      const result = await discountCollection.find().toArray();
+      res.send(result);
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
