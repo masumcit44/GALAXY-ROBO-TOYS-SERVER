@@ -7,7 +7,7 @@ const port = process.env.PORT || 5000;
 // middleware
 app.use(cors());
 app.use(express.json());
-const { MongoClient, ServerApiVersion } = require("mongodb");
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.bs8dc9c.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -37,6 +37,12 @@ async function run() {
     app.get('/alltoys',async(req,res)=>{
       const limit = parseInt(req.query.limit) || 20;
       const result = await allToysCollection.find().limit(limit).toArray()
+      res.send(result)
+    })
+    app.get('/alltoys/:id',async(req,res)=>{
+      const id = req.params.id;
+      const query = {_id:new ObjectId(id)}
+      const result = await allToysCollection.findOne(query);
       res.send(result)
     })
     
